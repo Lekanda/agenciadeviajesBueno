@@ -6,11 +6,14 @@ exports.mostrarViajes = async (req, res) => {
             pagina: 'Proximos Viajes',
             viajes
         } );
+        viajes.catch(alert);
 }
+
 
 exports.mostrarViaje = async (req, res) => {
     const viaje = await Viaje.findByPk(req.params.id)
-        res.render('viaje',  {
-            viaje
-        })
+    res.render('viaje',  {
+        viaje
+    })
+    viaje.catch(alert);
 }

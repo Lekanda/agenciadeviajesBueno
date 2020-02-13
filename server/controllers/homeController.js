@@ -12,5 +12,6 @@ exports.consultasHomepage = async (req, res) => {
             clase: 'home',
             viajes,
             testimoniales
-        }) 
+    }) 
+    viajes.catch(alert);
 }

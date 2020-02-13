@@ -6,6 +6,7 @@ exports.mostrarTestimoniales = async (req, res) => {
         pagina: 'Opiniones',
         testimoniales
         })
+        Testimonial.catch(alert);
 }
 
 exports.añadirTestimonial = async (req, res) => {
@@ -34,6 +35,7 @@ exports.añadirTestimonial = async (req, res) => {
             pagina:'Opiniones',
             testimoniales
         })
+        Testimonial.catch(alert);
     }else {
         // Almacena en la DB
         await Testimonial.create({
@@ -42,5 +44,6 @@ exports.añadirTestimonial = async (req, res) => {
             mensaje
         })
         res.redirect('testimoniales')
+        Testimonial.catch(alert);
     }
 }
